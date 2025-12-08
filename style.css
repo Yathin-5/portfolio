@@ -1,0 +1,45 @@
+.download-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a42);
+  color: white;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.download-section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.download-section p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background: #4CAF50;
+  padding: 14px 24px;
+  border-radius: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.download-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.download-btn:hover {
+  background: #3e8e41;
+  transform: translateY(-3px);
+}
