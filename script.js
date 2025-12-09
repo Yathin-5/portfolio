@@ -10,7 +10,7 @@ function navigateTo(url) {
 /* --- NEW: Typewriter Effect --- */
 
 // 1. Text to be typed
-const fullText = "Hello, I'm <span class='highlight'>Yathin</span>"; 
+const fullText = "Hello, I'm <span class='highlight'>Yathin"; 
 // 2. The HTML element where the text will appear
 const textElement = document.getElementById('hero-text');
 // 3. Speed of typing in milliseconds
