@@ -1,45 +1,136 @@
-.download-section {
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #1e1e2f, #2a2a42);
-  color: white;
-  border-radius: 20px;
-  max-width: 600px;
-  margin: 40px auto;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+/* General Body Styles */
+body {
+    margin: 0;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 1.5s ease-in;
 }
 
-.download-section h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.download-section p {
-  font-size: 16px;
-  opacity: 0.9;
-  margin-bottom: 20px;
+/* Container for Centered Content (Home and Skills page) */
+.container {
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
 }
 
-.download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  background: #4CAF50;
-  padding: 14px 24px;
-  border-radius: 50px;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  transition: 0.3s;
+.container h1 {
+    font-size: 2.8rem;
 }
 
-.download-btn img {
-  width: 24px;
-  height: 24px;
+.container p {
+    font-size: 1.2rem;
+    color: #c0c0c0;
 }
 
-.download-btn:hover {
-  background: #3e8e41;
-  transform: translateY(-3px);
+.highlight {
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+.home-nav {
+    margin-top: 20px;
+}
+
+/* General Button Styles */
+button {
+    margin: 10px;
+    padding: 12px 25px;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 5px;
+    color: #1c1c1c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0097a7;
+    transform: translateY(-2px);
+}
+
+/* Project Page Specific Styles */
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.project-container h1 {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    background-color: #2a2a2a;
+    border: 2px solid #4b4b4b;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.project-title {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #f5f5f5;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #c0c0c0;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.project-link-container {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.project-link-container:hover {
+    background-color: #e0e0e0;
+}
+
+.project-link {
+    color: #1c1c1c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Bottom Navigation Bar */
+.navigation-bar {
+    text-align: center;
+    padding: 20px;
 }
