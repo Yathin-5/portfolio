@@ -134,3 +134,94 @@ button:hover {
     text-align: center;
     padding: 20px;
 }
+/* ---------------- DOWNLOAD PAGE STYLES ---------------- */
+
+.download-section {
+    text-align: center;
+    padding: 50px 20px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.download-section h2 {
+    font-size: 2.2rem;
+    color: #00bcd4;
+    margin-bottom: 15px;
+}
+
+.download-section p {
+    font-size: 1.1rem;
+    color: #c0c0c0;
+    margin-bottom: 25px;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    background-color: #00bcd4;
+    color: #1c1c1c;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #0097a7;
+    transform: translateY(-3px);
+}
+
+.download-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+/* ------------------------------------------------------- */
+
+/* ---------------- Promo Image Gallery (Download Page) ---------------- */
+
+.promo-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.promo-section h3 {
+    font-size: 1.8rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.promo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.promo-img {
+    width: 160px;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease;
+}
+
+.promo-img1 {
+    width: 160px;
+    height: 160px;
+    border-radius: 15px;
+    border: 2px solid #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease;
+}
+.promo-img:hover {
+    transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------------- */
