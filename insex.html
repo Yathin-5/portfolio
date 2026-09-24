@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yathin's professional developer portfolio.">
+    <title>Yathin | Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --background: #f0f4f8;
+            --surface: rgba(255, 255, 255, 0.3);
+            --surface-strong: rgba(255, 255, 255, 0.5);
+            --nav-glass: rgba(255, 255, 255, 0.25);
+            /* Specialized nav glass */
+            --nav-highlight: rgba(255, 255, 255, 0.45);
+            /* Highlight instead of black */
+            --text: #0a0a0a;
+            --muted: #444444;
+            --border-white: rgba(255, 255, 255, 0.6);
+            --display: "Bricolage Grotesque", system-ui, sans-serif;
+            --body: "DM Sans", system-ui, sans-serif;
+        }
+
+        /* COMPLETELY DISABLE TEXT SELECTION */
+        * {
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--background);
+            color: var(--text);
+            font: 400 1.05rem/1.6 var(--body);
+            overflow-x: hidden;
+        }
+
+        /* Core Glass Style */
+        .glass {
+            background: var(--surface);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid var(--border-white);
+            border-radius: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+        }
+
+        /* BACKGROUND ORBS - Your Choice Colors */
+        .background-orbs {
+            position: fixed;
+            z-index: -1;
+            inset: 0;
+            background: linear-gradient(135deg, #ffffff 0%, #e0eaf1 100%);
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            animation: drift 22s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 45vmax;
+            height: 45vmax;
+            top: -10%;
+            left: -5%;
+            background: #04c6f1;
+            opacity: 0.6;
+        }
+
+        .orb-2 {
+            width: 35vmax;
+            height: 35vmax;
+            bottom: -5%;
+            right: -5%;
+            background: #04c6f1;
+            opacity: 0.5;
+        }
+
+        .orb-3 {
+            width: 25vmax;
+            height: 25vmax;
+            top: 40%;
+            left: 30%;
+            background: #04c6f1;
+            opacity: 0.3;
+        }
+
+        @keyframes drift {
+            to {
+                transform: translate(5vmax, 5vmax) scale(1.05);
+            }
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* 
+           IMPROVED NAVIGATION BAR 
+           Designed to feel completely like glass
+        */
+        .site-nav {
+            position: fixed;
+            z-index: 100;
+            top: 24px;
+            left: 50%;
+            display: flex;
+            gap: 8px;
+            padding: 6px;
+            transform: translateX(-50%);
+            border-radius: 100px;
+            background: var(--nav-glass);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(30px) saturate(150%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-link {
+            padding: 10px 24px;
+            border-radius: 100px;
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid transparent;
+        }
+
+        /* No more solid black. Pure Glass Highlight on hover and active. */
+        .nav-link:hover,
+        .nav-link.active {
+            background: var(--nav-highlight);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+            color: #000;
+        }
+
+        /* Hero Split Design */
+        .hero {
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .hero-card {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 40px;
+            padding: clamp(30px, 6vw, 75px);
+            align-items: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--display);
+            letter-spacing: -0.03em;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .eyebrow {
+            margin-bottom: 12px;
+            color: var(--muted);
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .typewriter {
+            display: block;
+            color: var(--muted);
+            opacity: 0.7;
+            font-weight: 600;
+        }
+
+        .hero-copy {
+            max-width: 460px;
+            margin-bottom: 35px;
+            font-size: 1.1rem;
+            color: var(--muted);
+        }
+
+        .button-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .button {
+            padding: 14px 30px;
+            border-radius: 100px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .button-primary {
+            background: #000;
+            color: #fff;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-secondary {
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid var(--border-white);
+            color: var(--text);
+        }
+
+        .button-secondary:hover {
+            background: #fff;
+            transform: translateY(-3px);
+        }
+
+        .hero-aside {
+            width: 100%;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .visual-frame {
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            border: 1px solid var(--border-white);
+            background: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0 30px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            margin-bottom: 40px;
+        }
+
+        /* Skills Chips */
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .chip {
+            padding: 12px 26px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            background: var(--surface-strong);
+            border-radius: 20px;
+        }
+
+        /* Project Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            padding: 35px;
+            transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            background: var(--surface-strong);
+            border-color: #fff;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: var(--muted);
+            flex-grow: 1;
+        }
+
+        .project-link {
+            font-weight: 800;
+            color: #000;
+            text-decoration: none;
+            border-bottom: 2px solid #000;
+            width: fit-content;
+            font-size: 0.9rem;
+        }
+
+        /* Real Contact Details Integrated */
+        .contact-card {
+            padding: 60px;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item h4 {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: var(--muted);
+        }
+
+        .contact-item p,
+        .contact-item a {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.7;
+        }
+
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        @media (max-width: 850px) {
+            .hero-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-aside {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .button-row {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Updated Orbs with Color #04c6f1 -->
+    <div class="background-orbs" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+    </div>
+
+    <!-- Navigation with True Glass interactions -->
+    <nav class="site-nav">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <!-- Hero Split Header -->
+        <header class="hero" id="home">
+            <div class="hero-card glass">
+                <div class="hero-content">
+                    <p class="eyebrow">Professional Portfolio</p>
+                    <h1>Hi, I'm Yathin.<span class="typewriter" id="typewriter"></span></h1>
+                    <p class="hero-copy">
+                        An engineer focused on building clean digital experiences and discovering new AI potential.
+                    </p>
+                    <div class="button-row">
+                        <a class="button button-primary" href="#projects">Work</a>
+                        <a class="button button-secondary" href="#skills">Stack</a>
+                    </div>
+                </div>
+                <div class="hero-aside">
+                    <div class="visual-frame glass" style="overflow: hidden; padding: 0;">
+                        <img src="profile.png" alt="Yathin"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 30px;">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="section-heading">
+                <p class="eyebrow">The Stack</p>
+                <h2>Languages & Skills</h2>
+            </div>
+            <div class="chips">
+                <span class="glass chip">C / C++</span>
+                <span class="glass chip">Java</span>
+                <span class="glass chip">Python</span>
+                <span class="glass chip">HTML & CSS</span>
+                <span class="glass chip">JavaScript</span>
+                <span class="glass chip" style="border-color: #04c6f1;">Curious about AI & ML</span>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="section-heading">
+                <p class="eyebrow">Portfolio</p>
+                <h2>Projects</h2>
+            </div>
+            <div class="project-grid">
+                <article class="glass project-card">
+                    <h3>AI Tools Directory</h3>
+                    <p>A specialized library curated for developers and researchers exploring the latest in AI.</p>
+                    <a class="project-link" href="https://techtrck.github.io/codetrail/" target="_blank">Live View</a>
+                </article>
+
+                <article class="glass project-card">
+                    <h3>Tic Tac Toe</h3>
+                    <p>Logic-driven game featuring minimalist architecture and optimized game flow.</p>
+                    <a class="project-link" href="https://techtrck.github.io/tictactoe/" target="_blank">Launch Game</a>
+                </article>
+
+                <article class="glass project-card">
+                    <h3>Android Mobile App</h3>
+                    <p>Native experimentation on mobile systems focused on UI consistency and performance.</p>
+                    <a class="project-link" href="app-release.apk" download>Download APK</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Real Contact Section with Your Details -->
+        <section id="contact">
+            <div class="section-heading">
+                <p class="eyebrow">Connect</p>
+                <h2>Contact</h2>
+            </div>
+            <div class="glass contact-card">
+                <h3>Building the future, one project at a time.</h3>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h4>EMAIL</h4>
+                        <p><a href="mailto:yathinchelluri@gmail.com">yathinchelluri@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>GITHUB</h4>
+                        <p><a href="https://github.com/Yathin-5" target="_blank">@Yathin-5</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>REGION</h4>
+                        <p>India</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Yathin | Engineered with DM Sans & Bricolage Grotesque</p>
+    </footer>
+
+    <script>
+        // Smoother Typewriter Logic
+        const typewriter = document.getElementById("typewriter");
+        const phrases = [" I build software.", " I optimize logic.", " I study AI."];
+        let pIdx = 0, charIdx = 0, isDeleting = false;
+
+        function type() {
+            const current = phrases[pIdx];
+            typewriter.textContent = isDeleting ? current.substring(0, charIdx--) : current.substring(0, charIdx++);
+
+            if (!isDeleting && charIdx > current.length) {
+                isDeleting = true;
+                setTimeout(type, 1600);
+            } else if (isDeleting && charIdx < 0) {
+                isDeleting = false;
+                pIdx = (pIdx + 1) % phrases.length;
+                setTimeout(type, 400);
+            } else {
+                setTimeout(type, isDeleting ? 30 : 60);
+            }
+        }
+        type();
+
+        // Update Active Nav link during scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section, header');
+            const links = document.querySelectorAll('.nav-link');
+            let currentId = "";
+            sections.forEach(sec => {
+                if (pageYOffset >= (sec.offsetTop - 150)) currentId = sec.getAttribute('id');
+            });
+            links.forEach(l => {
+                l.classList.remove('active');
+                if (l.getAttribute('href').includes(currentId)) l.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
