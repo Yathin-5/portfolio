@@ -1,0 +1,105 @@
+
+My Current Mubeen
+
+Hyderabad, Telangana – India
+
++91 910XXXX • mubeenXXXX@gmail.com  
+
+https://www.linkedin.com/in/abdul-mubeen-44XXX33/ • github.com/mubeenXXX 
+
+
+
+Objective
+
+Final-year B.Tech student in Computer Science Engineering (AI & ML) with expertise in  Python, OOP, Full-stack Web Development, and MySQL.Passionate about building impactful  solutions and eager to apply technical skills to real-world challenges.  
+
+
+Education
+
+XXXX Engineering College – Hyderabad  
+
+B.Tech in Artificial Intelligence & Machine Learning (2021 – 2025)
+
+Narayana Junior College – Hyderabad  
+
+Board of Intermediate Education (2019 – 2021) | 89%
+
+AdXXX School – Area District  
+
+Secondary School Certificate (SSC) (2010 – 2018) | 9.8 CGPA
+
+
+Skills
+
+Programming Languages: Python, MySQL, HTML, CSS, JavaScript  
+
+Frameworks & Tools: Next.js, Bootstrap, Tkinter  
+
+Technical Concepts: Object-Oriented Programming (OOP), Machine Learning, Data Visualization  Soft Skills: Team Collaboration, Time Management, Logical & Critical Thinking
+
+
+
+Work Experience    
+
+Smart India Hackathon – Editing Team Leader (Dec 2023)
+
+• Led a team to create and manage content for Smart India Hackathon 2023. • Optimized content presentation to increase engagement and visibility.
+
+• Demonstrated strong leadership, teamwork, and content strategy skills.
+
+
+
+Projects (your top 3 projects) example
+
+Object-Oriented Snake Game
+
+• Developed a Snake Game using Python’s Turtle library, implementing OOP principles. • Designed reusable classes for game elements, integrated collision detection & score  tracking.
+
+
+Sales Data Analysis & Visualization
+
+• Built an interactive data visualization solution for analyzing sales data patterns. • Used Python, SQL, Matplotlib, and Seaborn for insights & visualization. .
+
+
+Certifications
+
+100 Days of Python: Practicing a comprehensive Python programming course on Udemy.        
+
+Full-Stack Web Development: Working and Gaining proficiency in building responsive websites  through Udemy.
+
+Python Essentials: Certified in foundational Python programming by Cisco.
+
+
+
+Hobbies
+
+Gym, Reading, Content Creation, Playing Basketball
+
+
+
+
+Steps to Build Your Resume
+
+1) Start with this prompt for ChatGPT:
+
+Hi, I’d like your help building a resume that follows this structure and achieves an ATS score of 90+:
+
+My name and contact information at the top
+A short Objective paragraph
+An Education section (College, Junior College, School with years and grades)
+A Skills section divided into:
+Programming Languages
+Frameworks & Tools
+Technical Concepts
+Soft Skills
+A Work Experience section with role, organization, and bullet points
+A Projects section with 3–4 projects, each with 2–3 bullet points
+A Certifications section
+A Hobbies section
+Please ask me for the necessary details step by step and wait for my responses. Based on my answers, format everything professionally.
+
+2) Once done:
+ Edit and paste your details into the structure or GO to Canva and select any Resume template and edit. Review everything carefully and format your resume to look clean, consistent, and professional.
+
+If you have any doubts, feel free to DM me.
+All the best!
