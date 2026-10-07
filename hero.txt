@@ -103,3 +103,6 @@ Please ask me for the necessary details step by step and wait for my responses. 
 
 If you have any doubts, feel free to DM me.
 All the best!
+
+
+* on the starting  intro box which is with the name and photo space in that when a animation like some words are changes one after the other between the change animation of the text like "i study ai  " like that the text on the top and the bottom of that animating part are displacing i dont want it ot be like that the text on top anf the bottom of the animating text should not displace like that they should be in the study position ok i hope you undersand
