@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mubeen's resume.">
+    <title>Resume | Mubeen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --ink: #171717;
+            --muted: #5e5e5e;
+            --line: #d7d7d7;
+            --paper: #fff;
+            --canvas: #ececec;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--canvas);
+            color: var(--ink);
+            font: 400 0.92rem/1.55 "DM Sans", Arial, sans-serif;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .resume-actions {
+            position: fixed;
+            z-index: 2;
+            top: 24px;
+            left: 24px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .action {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 15px;
+            border: 1px solid #c9c9c9;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.85);
+            color: var(--ink);
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .action:hover {
+            background: #fff;
+            transform: translateY(-2px);
+        }
+
+        .resume {
+            width: min(100% - 32px, 920px);
+            min-height: 1188px;
+            margin: 70px auto 40px;
+            padding: 66px 76px;
+            background: var(--paper);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .resume-header {
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--ink);
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+        }
+
+        h1 {
+            font: 700 clamp(2rem, 5vw, 3.2rem)/1.1 "Libre Baskerville", Georgia, serif;
+            letter-spacing: -0.04em;
+        }
+
+        .location {
+            margin: 9px 0 14px;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .contact-line {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px 14px;
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        .contact-line a {
+            text-decoration: none;
+        }
+
+        .contact-line a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 22px 0 0;
+        }
+
+        .section-title {
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--line);
+            font-size: 0.77rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .objective {
+            margin: 0;
+            color: #303030;
+            text-align: justify;
+        }
+
+        .entry {
+            margin-bottom: 15px;
+        }
+
+        .entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .entry-heading {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-weight: 700;
+        }
+
+        .entry-heading span:last-child {
+            flex: 0 0 auto;
+            color: var(--muted);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .entry-subtitle {
+            margin: 2px 0 5px;
+            color: var(--muted);
+            font-size: 0.84rem;
+        }
+
+        ul {
+            margin: 5px 0 0;
+            padding-left: 19px;
+        }
+
+        li {
+            margin: 2px 0;
+        }
+
+        .skill-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px 25px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skill-list strong {
+            display: inline-block;
+            min-width: 145px;
+        }
+
+        .compact-list {
+            margin: 0;
+            padding-left: 19px;
+        }
+
+        @media (max-width: 700px) {
+            .resume {
+                width: 100%;
+                min-height: 100vh;
+                margin: 0;
+                padding: 92px 24px 40px;
+                box-shadow: none;
+            }
+
+            .resume-actions {
+                top: 16px;
+                left: 16px;
+            }
+
+            .entry-heading {
+                display: block;
+            }
+
+            .entry-heading span:last-child {
+                display: block;
+                margin-top: 2px;
+            }
+
+            .skill-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .resume-actions {
+                display: none;
+            }
+
+            .resume {
+                width: 100%;
+                min-height: 0;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-actions">
+        <a class="action" href="index.html">← Portfolio</a>
+        <button class="action" type="button" onclick="window.print()">Print / Save PDF</button>
+    </div>
+
+    <main class="resume">
+        <header class="resume-header">
+            <h1>My Current Yathin</h1>
+            <p class="location">Visakhapatanam, Andhra Pradesh – India</p>
+            <div class="contact-line">
+                <a href="tel:+91910XXXX">+91 7386050310</a>
+                <a href="mailto:mubeenXXXX@gmail.com">yathinchelluri@gmail.com</a>
+                <a href="https://www.linkedin.com/in/abdul-mubeen-44XXX33/" target="_blank"
+                    rel="noopener">LinkedIn</a>
+                <a href="https://github.com/mubeenXXX" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section-title">Objective</h2>
+            <p class="objective">Final-year B.Tech student in Computer Science Engineering with
+                expertise in Python, OOP, full-stack web development, and MySQL. Passionate about building impactful
+                solutions and eager to apply technical skills to real-world challenges.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="entry">
+                <div class="entry-heading"><span>Raghu Engineering College – Visakhapatanam</span><span>2021 – 2025</span>
+                </div>
+                <p class="entry-subtitle">B.Tech in Computer Science </p>
+            </div>
+            <div class="entry">
+                <div class="entry-heading"><span>Sri Chaitanya Junior College – Visakhapatanam,Gajuwaka</span><span>2019 – 2021</span>
+                </div>
+                <p class="entry-subtitle">Board of Intermediate Education | 81.9%</p>
+            </div>
+            <div class="entry">
+                <div class="entry-heading"><span>Chalapathi E.M public School – Visakhapatanam,Gajuwaka</span><span>2010 – 2018</span></div>
+                <p class="entry-subtitle">Secondary School Certificate (SSC) | 80%</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Skills</h2>
+            <ul class="skill-list">
+                <li><strong>Programming:</strong> C,Java,Python, MySQL, HTML, CSS, JavaScript</li>
+                <li><strong>Frameworks:</strong> Next.js, Bootstrap, Tkinter</li>
+                <li><strong>Concepts:</strong> OOP, Machine Learning, Data Visualization</li>
+                <li><strong>Soft skills:</strong> Team Collaboration, Time Management, Logical &amp; Critical Thinking
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Work Experience</h2>
+            <div class="entry">
+                <div class="entry-heading"><span>Smart India Hackathon — Editing Team Leader</span><span>Dec
+                        2023</span></div>
+                <ul>
+                    <li>Led a team to create and manage content for Smart India Hackathon 2023.</li>
+                    <li>Optimized content presentation to increase engagement and visibility.</li>
+                    <li>Demonstrated leadership, teamwork, and content strategy skills.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Projects</h2>
+            <div class="entry">
+                <div class="entry-heading"><span>Object-Oriented Snake Game</span></div>
+                <ul>
+                    <li>Developed a Snake Game using Python’s Turtle library, implementing OOP principles.</li>
+                    <li>Designed reusable classes with collision detection and score tracking.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="entry-heading"><span>Sales Data Analysis &amp; Visualization</span></div>
+                <ul>
+                    <li>Built an interactive solution for analyzing sales data patterns.</li>
+                    <li>Used Python, SQL, Matplotlib, and Seaborn for insights and visualization.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <div class="entry-heading"><span>Project Three — Add your project title</span></div>
+                <ul>
+                    <li>Add a concise description of the project and the result it achieved.</li>
+                    <li>Add the technologies, responsibilities, or measurable outcome.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Certifications</h2>
+            <ul class="compact-list">
+                <li><strong>100 Days of Python:</strong> Comprehensive Python programming course on Udemy.</li>
+                <li><strong>Full-Stack Web Development:</strong> Responsive website development through Udemy.</li>
+                <li><strong>Python Essentials:</strong> Introduction to Python programming certification by DataCamp.</li>
+                <li><strong>Python :</strong> Intermediate Python programming certification by DataCamp.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="section-title">Hobbies</h2>
+            <p class="objective">Gym, Reading, Content Creation, Playing Basketball</p>
+        </section>
+    </main>
+</body>
+
+</html>

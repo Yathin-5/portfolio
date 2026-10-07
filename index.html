@@ -157,6 +157,45 @@
             color: #000;
         }
 
+        .resume-nav-button {
+            position: fixed;
+            z-index: 101;
+            top: 24px;
+            right: 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 17px;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.3);
+            color: var(--text);
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-decoration: none;
+            backdrop-filter: blur(24px) saturate(150%);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resume-nav-button::before {
+            content: "↗";
+            display: grid;
+            width: 22px;
+            height: 22px;
+            place-items: center;
+            border-radius: 50%;
+            background: #000;
+            color: #fff;
+            font-size: 0.85rem;
+        }
+
+        .resume-nav-button:hover {
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+            transform: translateY(-3px);
+        }
+
         /* Hero Split Design */
         .hero {
             display: flex;
@@ -374,6 +413,15 @@
         }
 
         @media (max-width: 850px) {
+            .site-nav {
+                top: 18px;
+            }
+
+            .resume-nav-button {
+                top: 76px;
+                right: 20px;
+            }
+
             .hero-card {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -407,6 +455,7 @@
         <a class="nav-link" href="#projects">Projects</a>
         <a class="nav-link" href="#contact">Contact</a>
     </nav>
+    <a class="resume-nav-button" href="resume.html" aria-label="View resume">View Resume</a>
 
     <main>
         <!-- Hero Split Header -->
